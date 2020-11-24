@@ -19,3 +19,31 @@ body{background-color:#393E46; font-family:'Montserrat','Rubik',Arial; margin:0;
 .next{background-color:inherit; border:3px solid; border-radius:30px; color:#4ECCA3; font-size:150%; padding:5px 5px; text-align:center; text-decoration:none;}
 
 footer{color:#4ECCA3; font-family:'Indie Flower',Arial; height:130px; margin-top:5%; padding-top:4%; text-align:center;}
+
+/* For Small Screens */
+@media screen and (min-width: 480px) and (max-width: 700px){
+  .first{height:200px; width:200px;}
+
+  .buttons{margin-top:3%;}
+}
+
+/* For Very Small Screens */
+@media screen and (max-width: 480px) {
+  .header{font-size:1.3rem; height:70px;}
+
+  .container{}
+
+  .die{}
+
+  .first{height:100px; width:100px;}
+
+  .buttons{margin-top:4%;}
+
+  .throw{font-size:1.2rem; padding:3px 5px;}
+
+  .throwPlayerTwo{font-size:1.2rem; padding:3px 5px;}
+
+  .next{font-size:1.2rem; padding:3px 5px;}
+
+  footer{font-size:0.8rem; height:40px; margin-top:6%; padding-top:3%;}
+}

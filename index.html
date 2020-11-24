@@ -14,17 +14,51 @@
 
       .header{color:#fff; font-family:'Lobster',Arial; font-size:2rem; height:100px; text-align:center; width:100%;}
 
-      .rules{color:#4ECCA3; font-size:1.5rem; height:300px; margin-top:2%; text-align:left;}
+      .rules{color:#4ECCA3; font-size:1.5rem; height:auto; margin-top:0.5%; text-align:center;}
 
       span{margin-left:5%;}
 
       h3{font-size:3rem; margin-bottom:0; margin-top:0; text-align:center;}
 
-      p{margin-left:10%; margin-right:5%;}
+      p{height:auto; margin-top:1%; padding-left:33%; padding-right:33%; text-align:left;}
 
-      .continue{background-color:inherit; border:3px solid; border-radius:30px; color:#4ECCA3; font-size:1.5rem; margin-left:43%; padding:5px 5px; text-decoration:none;}
+      .continue{background-color:inherit; border:3px solid; border-radius:30px; color:#4ECCA3; font-size:1.5rem; padding:5px 5px; text-decoration:none;}
 
-      footer {color:#4ECCA3; font-family:'Indie Flower',Arial; height:130px; margin-top:4.3%; padding-top:4%; text-align:center;}
+      footer{color:#4ECCA3; font-family:'Indie Flower',Arial; height:50px; margin-top:1%; padding-top:1%; text-align:center;}
+
+    /* For Small Screens */
+      @media screen and (min-width: 480px) and (max-width: 700px) {
+        .header{font-size:150%;}
+
+        .rules{height:auto; margin-top:0;}
+
+        span{margin-left:2%;}
+
+        h3{font-size:100%;}
+
+        p{font-size:90%; padding-left:5%; padding-right:5%;}
+
+        .continue{font-size:70%;}
+
+        footer{height:50px; margin-top:2%; padding-top:1%;}
+      }
+
+      /* For Very Small Screen */
+      @media screen and (max-width: 480px){
+        .header{font-size:1.3rem}
+
+        .rules{font-size:1rem;}
+
+        span{margin-left:1.5%;}
+
+        h3{font-size:1.2rem;}
+
+        p{padding-left:5%; padding-right:5%;}
+
+        .continue{border:1px solid; font-size:1.2rem;}
+
+        footer{height:48px; margin-top:3%; font-size:0.8rem; padding-top:2%;}
+      }
     </style>
   </head>
 
@@ -35,7 +69,7 @@
 
     <div class="rules">
       <h3>Here is how you play</h3>
-      <p><span></span>So, Each Player declares the total Number on the Dice He/She thinks would be displayed, If the number you guessed is the same as the one displayed on the computer, you win. And if its not the same, You Lose. Since we are clear on how to play, Hit the continue button. <br>P.S. You can decide wether or not you want to place bets.</p>
+      <p><span></span>So, each player declares the total number on the dice he/she thinks would be displayed, If the number you guessed is the same as the one displayed on the screen, you win. And if its not the same, you lose. Since we are clear on how to play, hit the continue button. <br> <span></span>P.S. You can decide wether or not you want to place bets.</p>
       <a href="playerOne.html" id="myBtn" class="continue">CONTINUE</a>
     </div>
   </body>
