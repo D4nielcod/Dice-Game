@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,500&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <title>Welcome Players</title>
+    <style>
+      /* BASIC STYLING */
+      * {box-sizing:border-box;}
+      body{background-color:#393E46; font-family:'Montserrat','Rubik',Arial; margin:0; padding:0;}
+      .header{color:#fff; font-family:'Lobster'; font-size:2rem; height:100px; margin-bottom:0; text-align:center; width:100%;}
+      .container{border:1px solid #4ECCA3; position:absolute; text-align:center; width:48%;}
+      .container1{margin-left:1%;}
+      .container2{margin-left:51%;}
+      h1{color:#4ECCA3; margin-bottom:1%; text-decoration:underline;}
+      .die{display:inline;}
+      .first, .second{height:300px; width:300px;}
+      .die2{margin-left:1%;}
+      .throw1, .throw2{background-color:inherit; border:3px solid; border-radius:30px; color:#4ECCA3; display:block; font-size:150%; margin-left:35%; margin-bottom:2%; margin-top:2%; padding:5px; text-align:center; text-decoration:none; width:30%;}
+      footer{color:#4ECCA3; font-family:'Indie Flower',Arial; height:25px; margin-top:34%; text-align:center;}
+
+      /* SMALL SCREEN */
+      @media screen and (min-width:480px) and (max-width:700px){
+        .header{height:70px; font-size:150%}
+        h1{font-size:130%;}
+        .first, .second{height:100px; width:100px;}
+        .throw1, .throw2{font-size:110%; padding:5px; margin-left:25%; width:50%;}
+        footer{margin-top:42%;}
+      }
+
+      /* SMALLER SCREEN */
+      @media screen and (max-width:480px) {
+        .header{font-size:1.3rem; height:70px;}
+        h1{font-size:1rem;}
+        .first, .second{height:50px; width:50px;}
+        .throw1, .throw2{font-size:0.7rem; margin-left:20%; padding:2px; width:60%;}
+        footer{font-size:0.8rem; height:40px; margin-top:35%; padding-top:3%;}
+      }
+
+      /* TABLET SCREEN */
+      @media screen and (min-width:700px) and (max-width:1300px){
+        .header{height:70px; font-size:150%}
+        h1{font-size:130%;}
+        .first, .second{height:150px; width:150px;}
+        .throw1, .throw2{font-size:110%; padding:5px; margin-left:25%; width:50%;}
+        footer{margin-top:32%;}
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header"><h2 id="main">Let's Play</h2></div>
+
+    <!-- PLAYER ONE -->
+    <div class="container container1">
+      <h1>Player One</h1>
+      <div class="die"><img class="first" src="dice1.png" alt=""></div>
+      <div class="die die2"><img class="first" src="dice1.png" alt=""></div>
+      <a href="#" class="throw1" onclick="changeContent1()">Throw Dice</a>
+    </div>
+
+    <!-- PLAYER TWO -->
+    <div class="container container2">
+      <h1>Player Two</h1>
+      <div class="die"><img class="second" src="dice1.png" alt=""></div>
+      <div class="die die2"><img class="second" src="dice1.png" alt=""></div>
+      <a href="#" onclick="changeContent2()" class="throw2">Throw Dice</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>🎲 DAYSPRING DIGITAL SKILL TRAINING 🎲</footer>
+
+    <!-- Javascript -->
+    <script>
+      alert("Player One's turn");
+      var imageGotten=document.querySelectorAll('.first'); imageArray=['dice1.png','dice2.png','dice3.png','dice4.png','dice5.png','dice6.png'];
+
+      // PLAYER ONE
+      function changeContent1(){
+        newArray=['dice1.png','dice2.png','dice3.png','dice4.png','dice5.png','dice6.png'].sort(function(){return .5 - Math.random();});
+        a=document.querySelectorAll('.first')[0].src=newArray[0]; b = document.querySelectorAll('.first')[1].src=newArray[1];
+        // When a==dice1
+        if(a=='dice1.png' & b=='dice1.png'){result1=02;} if(a=='dice1.png' & b=='dice2.png'){result1=03;} if(a=='dice1.png' & b=='dice3.png'){result1=04;} if(a=='dice1.png' & b=='dice4.png'){result1=05;} if(a=='dice1.png' & b=='dice5.png'){result1=06;} if(a=='dice1.png' & b=='dice6.png'){result1=07;}
+        // When a==dice2
+        if(a=='dice2.png' & b=='dice1.png'){result1=03;} if(a=='dice2.png' & b=='dice2.png'){result1=04;} if(a=='dice2.png' & b=='dice3.png'){result1=05;} if(a=='dice2.png' & b=='dice4.png'){result1=06;} if(a=='dice2.png' & b=='dice5.png'){result1=07;} if(a=='dice2.png' & b=='dice6.png'){result1=08;}
+        // When a==dice3
+        if(a=='dice3.png' & b=='dice1.png'){result1=04;} if(a=='dice3.png' & b=='dice2.png'){result1=05;} if(a=='dice3.png' & b=='dice3.png'){result1=06;} if(a=='dice3.png' & b=='dice4.png'){result1=07;} if(a=='dice3.png' & b=='dice5.png'){result1=08;} if(a=='dice3.png' & b=='dice6.png'){result1=09;}
+        // When a==dice4
+        if(a=='dice4.png' & b=='dice1.png'){result1=05;} if(a=='dice4.png' & b=='dice2.png'){result1=06;} if(a=='dice4.png' & b=='dice3.png'){result1=07;} if(a=='dice4.png' & b=='dice4.png'){result1=08;} if(a=='dice4.png' & b=='dice5.png'){result1=09;} if(a=='dice4.png' & b=='dice6.png'){result1=10;}
+        // When a==dice5
+        if(a=='dice5.png' & b=='dice1.png'){result1=06;} if(a=='dice5.png' & b=='dice2.png'){result1=07;} if(a=='dice5.png' & b=='dice3.png'){result1=08;} if(a=='dice5.png' & b=='dice4.png'){result1=09;} if(a=='dice5.png' & b=='dice5.png'){result1=10;} if(a=='dice5.png' & b=='dice6.png'){result1=11;}
+        // When a==dice6
+        if(a=='dice6.png' & b=='dice1.png'){result1=07;} if(a=='dice6.png' & b=='dice2.png'){result1=08;} if(a=='dice6.png' & b=='dice3.png'){result1=09;} if(a=='dice6.png' & b=='dice4.png'){result1=10;} if(a=='dice6.png' & b=='dice5.png'){result1=11;} if(a=='dice6.png' & b=='dice6.png'){result1=12;}
+        alert("Player One has a total of " + result1); alert("Player Two's Turn");
+      }
+
+      // PLAYER TWO
+      function changeContent2(){
+        newArray2=['dice1.png','dice2.png','dice3.png','dice4.png','dice5.png','dice6.png'].sort(function(){return .5 - Math.random();});
+        c=document.querySelectorAll('.second')[0].src=newArray2[0]; d=document.querySelectorAll('.second')[1].src=newArray2[1];
+        // When c==dice1
+        if(c=='dice1.png' & d=='dice1.png'){result2=02;} if(c=='dice1.png' & d=='dice2.png'){result2=03;} if(c=='dice1.png' & d=='dice3.png'){result2=04;} if(c=='dice1.png' & d=='dice4.png'){result2=05;} if(c=='dice1.png' & d=='dice5.png'){result2=06;} if(c=='dice1.png' & d=='dice6.png'){result2=07;}
+        // When c==dice2
+        if(c=='dice2.png' & d=='dice1.png'){result2=03;} if(c=='dice2.png' & d=='dice2.png'){result2=04;} if(c=='dice2.png' & d=='dice3.png'){result2=05;} if(c=='dice2.png' & d=='dice4.png'){result2=06;} if(c=='dice2.png' & d=='dice5.png'){result2=07;} if(c=='dice2.png' & d=='dice6.png'){result2=08;}
+        // When c==dice3
+        if(c=='dice3.png' & d=='dice1.png'){result2=04;} if(c=='dice3.png' & d=='dice2.png'){result2=05;} if(c=='dice3.png' & d=='dice3.png'){result2=06;} if(c=='dice3.png' & d=='dice4.png'){result2=07;} if(c=='dice3.png' & d=='dice5.png'){result2=08;} if(c=='dice3.png' & d=='dice6.png'){result2=09;}
+        // When c==dice4
+        if(c=='dice4.png' & d=='dice1.png'){result2=05;} if(c=='dice4.png' & d=='dice2.png'){result2=06;} if(c=='dice4.png' & d=='dice3.png'){result2=07;} if(c=='dice4.png' & d=='dice4.png'){result2=08;} if(c=='dice4.png' & d=='dice5.png'){result2=09;} if(c=='dice4.png' & d=='dice6.png'){result2=10;}
+        // When c==dice5
+        if(c=='dice5.png' & d=='dice1.png'){result2=06;} if(c=='dice5.png' & d=='dice2.png'){result2=07;} if(c=='dice5.png' & d=='dice3.png'){result2=08;} if(c=='dice5.png' & d=='dice4.png'){result2=09;} if(c=='dice5.png' & d=='dice5.png'){result2=10;} if(c=='dice5.png' & d=='dice6.png'){result2=11;}
+        // When c==dice6
+        if(c=='dice6.png' & d=='dice1.png'){result2=07;} if(c=='dice6.png' & d=='dice2.png'){result2=08;} if(c=='dice6.png' & d=='dice3.png'){result2=09;} if(c=='dice6.png' & d=='dice4.png'){result2=10;} if(c=='dice6.png' & d=='dice5.png'){result2=11;} if(c=='dice6.png' & d=='dice6.png'){result2=12;}
+        alert("Player One has a total of "+result2);
+        if(result1>result2){alert("Player One Wins");} if(result1==result2){alert("It's a Draw.");} if(result1<result2){alert("Player Two Wins");}
+      }
+    </script>
+  </body>
+</html>
