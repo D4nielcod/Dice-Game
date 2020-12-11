@@ -114,8 +114,8 @@
         if(c=='dice5.png' & d=='dice1.png'){result2=06;} if(c=='dice5.png' & d=='dice2.png'){result2=07;} if(c=='dice5.png' & d=='dice3.png'){result2=08;} if(c=='dice5.png' & d=='dice4.png'){result2=09;} if(c=='dice5.png' & d=='dice5.png'){result2=10;} if(c=='dice5.png' & d=='dice6.png'){result2=11;}
         // When c==dice6
         if(c=='dice6.png' & d=='dice1.png'){result2=07;} if(c=='dice6.png' & d=='dice2.png'){result2=08;} if(c=='dice6.png' & d=='dice3.png'){result2=09;} if(c=='dice6.png' & d=='dice4.png'){result2=10;} if(c=='dice6.png' & d=='dice5.png'){result2=11;} if(c=='dice6.png' & d=='dice6.png'){result2=12;}
-        alert("Player One has a total of "+result2);
-        if(result1>result2){alert("Player One Wins");} if(result1==result2){alert("It's a Draw.");} if(result1<result2){alert("Player Two Wins");}
+        alert("Player Two has a total of " + result2);
+        if(result1>result2){document.getElementById("main").innerHTML="Player One Wins";} if(result1==result2){document.getElementById("main").innerHTML="It's a Draw";} if(result1<result2){document.getElementById("main").innerHTML="Player Two Wins";}
       }
     </script>
   </body>
